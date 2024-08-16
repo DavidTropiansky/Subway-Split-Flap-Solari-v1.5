@@ -107,7 +107,7 @@
             container: $('#board'), // Where in the DOM to put the board
             template: $('#row_template'), // Where in the DOM to find the row template
             numRows: 45, // number of rows to generate
-            sort: 'scheduled', // the column to sort by
+            sort: 'scheduled', // the column to sort by. Use 'scheduled' to sort by arrival time, 'line' to sort by train line, or 'terminal' to sort by destination.
             order: 'asc', // the order to sort by
             maxResults: 45, // number of results to retrieve from data feed
             pageInterval: 20000, // delay between pages (ms)
