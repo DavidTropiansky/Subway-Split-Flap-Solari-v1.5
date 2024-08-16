@@ -1,0 +1,112 @@
+/* ROUTE LOGOS DRUM */
+.splitflap .image {
+  float: left;
+  margin-right: 5px;
+  width: 115px;
+  height: 40px;
+  background: url('Route_bullets.png') no-repeat;
+  background-position: 0px 0px;
+}
+.splitflap .image span {
+  width: 115px;
+  height: 40px;
+  display: block;
+  background: url('Route_bullets.png') no-repeat;
+  background-position: 0px -38.3px; /* start with a blank */
+}
+
+.splitflap .image span.ctrn {
+  background-position: 0px -0px;
+} /* transition */
+.splitflap .image span.csp {
+  background-position: 0px -38.3px;
+} /* blank */
+.splitflap .image span.\31 {
+  background-position: 0px -78.5px;
+} /* 1 train */
+.splitflap .image span.\32 {
+  background-position: 0px -117.8px;
+} 
+.splitflap .image span.\33 {
+  background-position: 0px -157px;
+} 
+.splitflap .image span.\34 {
+  background-position: 0px -195.0px;
+} 
+.splitflap .image span.\35 {
+  background-position: 0px -234.0px;
+} 
+.splitflap .image span.\36 {
+  background-position: 0px -272px;
+} 
+.splitflap .image span.\36X {
+  background-position: 0px -311.8px;
+} 
+.splitflap .image span.\37 {
+  background-position: 0px -351.3px;
+} 
+.splitflap .image span.\37X {
+  background-position: 0px -390.6px;
+} 
+.splitflap .image span.A {
+  background-position: 0px -428.0px;
+} 
+.splitflap .image span.B {
+  background-position: 0px -468.1px;
+} 
+.splitflap .image span.C {
+  background-position: 0px -505.0px;
+} 
+.splitflap .image span.D {
+  background-position: 0px -544.0px;
+} 
+.splitflap .image span.E {
+  background-position: 0px -583.9px;
+} 
+.splitflap .image span.F {
+  background-position: 0px -622.1px;
+} 
+.splitflap .image span.FX {
+  background-position: 0px -622.1px;
+} 
+.splitflap .image span.G {
+  background-position: 0px -662.4px;
+} 
+.splitflap .image span.J {
+  background-position: -0.35px -700.7px;
+} 
+.splitflap .image span.L {
+  background-position: -0.24px -740.0px;
+} 
+.splitflap .image span.M {
+  background-position: 0px -779.0px;
+} 
+.splitflap .image span.N {
+  background-position: 0px -820.0px;
+} 
+.splitflap .image span.Q {
+  background-position: 0px -858.0px;
+} 
+.splitflap .image span.R {
+  background-position: 0px -900px;
+} 
+.splitflap .image span.GS {
+  background-position: 0px -939.2px;
+} 
+.splitflap .image span.SI {
+  background-position: 0px -939.2px;
+} 
+.splitflap .image span.H {
+  background-position: 0px -939.2px;
+} 
+.splitflap .image span.FS {
+  background-position: 0px -939.2px;
+} 
+.splitflap .image span.W {
+  background-position: 0px -980.0px;
+} 
+.splitflap .image span.Z {
+  background-position: 0px -1020.7px;
+} 
+
+

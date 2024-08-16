@@ -1,0 +1,10 @@
+{
+  "name": "Subway-Split-Flap-Solari-v1.5",
+  "version": "1.5.0",
+  "description": "A Simulated Split-Flap display",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
