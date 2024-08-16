@@ -27,3 +27,7 @@ Number of rows: To adjust the number of rows, change the value in line 30 within
 Sort order: To change the sorting format, change lines 110/111 in index.html. 
 
 Refresh interval: Change line 123 in the Python file and line 23 in app.js
+
+## Demo
+
+I have set up a temporary demo of this application [here](https://splitflap.glitch.me/).
