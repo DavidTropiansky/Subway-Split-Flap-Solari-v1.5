@@ -25,7 +25,9 @@ Some examples:
 Number of rows: To adjust the number of rows, change the value in line 30 within the app.js file, and lines 109 & 112 in index.html. 
 
 Sort order: To change the sorting format, change lines 110/111 in index.html. This is helpful if you have a station with a lot of different train lines, like Times Square:
-![Screenshot](vertical.png)
+
+
+<img src="vertical.png" width="50%">
 
 
 
