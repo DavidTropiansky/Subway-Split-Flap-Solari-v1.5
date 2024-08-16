@@ -6,5 +6,11 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
+  },
+
+  "scripts": {
+    "run-python": "python3 \"Solari Board V2.1.py\" &",
+    "start-node": "node app.js",
+    "start": "npm run run-python && npm run start-node"
   }
 }
