@@ -35,4 +35,4 @@ Refresh interval: Change line 123 in the Python file and line 23 in app.js
 
 ## Demo
 
-I have set up a temporary demo of this application [here](https://splitflap.glitch.me/). As each users screen size may be different, you can zoom in/out in the browser to fit your screen. There are enough rows loaded to run this vertically as well. 
+I have set up a temporary demo of this application [here](https://splitflap.glitch.me/). As each users screen size may be different, you can zoom in/out in the browser to fit your screen. There are enough rows loaded to run this vertically as well. You may experience lagging on some older mobile devices. If you experience lagging with your own project, you can adjust the 'stagger' time in index.html, or editing the refresh speed of other elements.
