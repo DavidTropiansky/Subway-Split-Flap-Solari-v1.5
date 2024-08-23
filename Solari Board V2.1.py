@@ -4,9 +4,8 @@ import os
 import requests
 from datetime import datetime
 
-Choose_A_Station = 'R20' # <<<< Input your station code here (UPPERCASE Letters) <<<<<<
+Choose_A_Station = 'R20'  # <<<< Input your station code here (UPPERCASE Letters) <<<<<<
 print("Running...")
-
 
 
 def get_stop_times(station):
@@ -23,19 +22,23 @@ def get_stop_times(station):
             stop_id = stop_times_data['name']
             api_time = datetime.fromtimestamp(int(stop_time["departure"]["time"])).strftime('%H:%M:%S')
             seconds_to_leave = int(stop_time["departure"]["time"]) - time.time()
-            arrival_time = int(seconds_to_leave / 60)
+            arrival_time = int(seconds_to_leave // 60)
 
-            # Only include if arrival_time is >= 1
-            if arrival_time >= 1:
+            # Only include if arrival_time is >= 0
+            if arrival_time > 0:
                 result.append({
                     "route_id": route_id,
                     "arrival_time": arrival_time,
                     "current_stop": stop_id,
                     "last_stop_name": last_stop_name,
                 })
-        # else:
-        #     # Handle cases where "time" is missing
-        #     print(f"Skipping stop time for station {station} due to missing 'time' field")
+            elif arrival_time == 0:
+                result.append({
+                    "route_id": route_id,
+                    "arrival_time": "0",
+                    "current_stop": stop_id,
+                    "last_stop_name": last_stop_name,
+                })
 
     return result
 
@@ -50,7 +53,7 @@ def get_transfer_stations(station):
     for transfer in transfers_data["transfers"]:
         if transfer["fromStop"]["id"] == station:
             transfer_stations.append(transfer["toStop"]["id"])
-    
+
     return transfer_stations
 
 def contains_delay(value):
@@ -85,8 +88,8 @@ def get_service_status():
     return results
 
 def main():
-    station = Choose_A_Station 
-    
+    station = Choose_A_Station
+
     # Get stop times for the original station
     result = get_stop_times(station)
 
@@ -113,14 +116,14 @@ def main():
             "service_status": service_status.get(route_id, {}).get("status", "Unknown")
         })
 
-    # Sort combined_results by arrival_time in ascending order
-    combined_results = sorted(combined_results, key=lambda x: x["arrival_time"])
+    # Sort combined_results by arrival_time in ascending order, handling both int and str types
+    combined_results = sorted(combined_results, key=lambda x: x["arrival_time"] if isinstance(x["arrival_time"], int) else float('inf'))
 
     # Output the combined results
     with open('output.json', 'w') as file:
         json.dump(combined_results, file, indent=4)
 
-    time.sleep(45)
+    time.sleep(20)
 
 if __name__ == "__main__":
     while True:
